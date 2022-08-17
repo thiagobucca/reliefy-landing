@@ -211,7 +211,7 @@ p {
   padding: 100px 0; }
   @media (max-width: 768px) {
     .space {
-      padding: 70px 0; } }
+      padding: 0px 0; } }
 
 .center-block {
   text-align: center; }
@@ -1796,3 +1796,44 @@ blockquote {
   transform: rotate(-45deg);
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+
+  .mobileShow {display: none;} 
+
+  /* Smartphone Portrait and Landscape */ 
+  @media (max-width: 768px) { 
+      .mobileShow {display: block;}
+  }
+
+
+  .mobileNot {display: inline;} 
+
+  /* Smartphone Portrait and Landscape */ 
+  @media (max-width: 768px) { 
+      .mobileNot {display: none;}
+  }
+
+  #logo 
+{
+   width:200px;/*give it a fixed size*/
+   margin:0 auto;
+   /* animation magic */
+   -webkit-transition: all 1s ease-in-out;
+   -moz-transition: all 1s ease-in-out ;
+   -ms-transition: all 1s ease-in-out ;
+   -o-transition: all 1s ease-in-out ;
+   transition: all 1s ease-in-out ;
+}
+
+#logo img 
+{
+   width:100%;
+   height:auto;
+}
+
+
+.shrink 
+{
+   width:100px;/*change the size here*/
+}
+

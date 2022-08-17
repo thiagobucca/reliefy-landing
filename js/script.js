@@ -1,4 +1,6 @@
 $(function() {
+    window.onscroll = function() {scrollFunction()};
+
     "use strict";
     $('#preloader').on('click', function() {
         $(this).fadeOut();
@@ -191,4 +193,15 @@ $(window).on('load', function() {
         }).init()
     }
 
+});
+
+$(document).on("scroll", function(){
+    if($(document).scrollTop() > 100)
+    {
+       $("#logo").addClass("shrink");
+    }
+    else
+    {
+        $("#logo").removeClass("shrink");
+    }
 });

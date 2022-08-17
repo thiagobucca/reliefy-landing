@@ -25,16 +25,26 @@
     <link rel="stylesheet" href="vendors/owlcarousel/css/owl.carousel.min.css">
     <link rel="stylesheet" href="vendors/owlcarousel/css/owl.theme.default.min.css">
     <!-- Main css -->
-    <link href="css/style.css" rel="stylesheet"> </head>
+    <link href="css/style.css" rel="stylesheet">
+</head>
 
 <body>
-    <div class="preloader" id="preloader"> <svg class="spinner" id="pageloader_anime" width="32px" height="32px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+    <div class="preloader" id="preloader"> <svg class="spinner" id="pageloader_anime" width="32px" height="32px"
+            viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
             <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
         </svg> </div>
+    <!-- <div id="headerz">Header<img src="images/reliefy.png" class="img-fluid mobileShow" alt="#"></div> -->
+    <header class="mobileShow">
+        <div id="logo" style="padding-top: 10px">
+            <img src="images/reliefy.png">
+        </div>
+    </header>
     <section class="space static">
         <div class="container">
             <div class="row">
-                <div class="col-md-5">
+                <!-- <div class="static-content-wrap mobileShow"> <img src="images/reliefy.png" class="img-fluid" alt="#">
+                </div> -->
+                <div class="col-md-5 mobileNot">
                     <div class="deatiled-phone-wrap"> <img src="images/detailed-screen.png" class="phone" alt="#">
                         <div class="screen">
                             <div class="screen-slider owl-carousel owl-theme">
@@ -46,23 +56,42 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-8 mx-auto  mobileShow">
+                    <div class="deatiled-phone-wrap"> <img src="images/detailed-screen.png" class="phone" alt="#">
+                        <div class="screen">
+                            <div class="screen-slider owl-carousel owl-theme">
+                                <div class="item"><img src="images/pic1.png" alt="#"></div>
+                                <div class="item"><img src="images/pic2.png" alt="#"></div>
+                                <div class="item"><img src="images/pic3.png" alt="#"></div>
+                                <div class="item"><img src="images/pic4.png" alt="#"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 mobileNot">
                     <div class="static-content-wrap"> <img src="images/reliefy.png" class="img-fluid" alt="#">
                         <h1 class="mb-4 h2">Um novo jeito de cuidar da sua mente.</h1>
                     </div>
-                    <div class="static-list-block"> <span style="color:#8E8E93" class="pe-7s-note2"></span>
+                    <div class="static-list-block "> <span style="color:#8E8E93" class="pe-7s-note2"></span>
                         <p>Exercícios Terapêuticos.</p>
                     </div>
-                    <div class="static-list-block"> <span style="color:#8E8E93" class="pe-7s-users"></span>
+                    <div class="static-list-block "> <span style="color:#8E8E93" class="pe-7s-users"></span>
                         <p>Atendimento Psicológico.</p>
                     </div>
-                    <div class="static-list-block"> <span style="color:#8E8E93" class="pe-7s-diamond"></span>
+                    <div class="static-list-block "> <span style="color:#8E8E93" class="pe-7s-diamond"></span>
                         <p>Saúde Mental e bem-estar.</p>
                     </div>
-                    <div class="static-img-block"> <a href="#"><img src="images/app-store.png" class="img-fluid" alt="#"></a> <a href="#"><img src="images/play-store.png" class="img-fluid" alt="#"></a>
+                    <div class="static-img-block"> <a href="#"><img src="images/app-store.png" class="img-fluid"
+                                alt="#"></a> <a href="#"><img src="images/play-store.png" class="img-fluid" alt="#"></a>
                     </div>
                 </div>
+                <h1 style="text-align: center;" class="mb-4 h2 mobileShow">Um novo jeito de cuidar da sua mente.</h1>
             </div>
+            <div class="text-center mobileShow" style="padding-bottom: 10px">
+                <a href="#"><img src="images/app-store.png" class="img-fluid" alt="#"></a> <a href="#"><img
+                        src="images/play-store.png" class="img-fluid" alt="#"></a>
+            </div>
+        </div>
         </div>
     </section>
     <script src="vendors/jquery/js/jquery-3.2.1.min.js"></script>
@@ -70,6 +99,17 @@
     <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
     <script src="vendors/owlcarousel/js/owl.carousel.min.js"></script>
     <script src="js/script.js"></script>
+    <!-- <script>
+        window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("headerz").style.fontSize = "30px";
+  } else {
+    document.getElementById("headerz").style.fontSize = "90px";
+  }
+}
+    </script> -->
 </body>
 
 </html>
