@@ -1,55 +1,10 @@
 $(function() {
-    window.onscroll = function() {scrollFunction()};
 
     "use strict";
     $('#preloader').on('click', function() {
         $(this).fadeOut();
     });
-    /*-----------------------------------
-     * STICKY MENU - HEADER
-     *-----------------------------------*/
-    var $navmenu = $('.nav-menu');
-    $(window).on('scroll', function() {
-        if ($navmenu.hasClass('not-sticky')) {
-            return false;
-        }
-        if ($(window).scrollTop() > 500) {
-            $navmenu.addClass('sticky-top');
-        } else {
-            $navmenu.removeClass("sticky-top");
-        }
-    });
-    /*-----------------------------------
-     * ONE PAGE SCROLLING
-     *-----------------------------------*/
-    // Select all links with hashes
-    $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').on('click', function(event) {
-        // On-page links
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            // Figure out element to scroll to
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            // Does a scroll target exist?
-            if (target.length) {
-                // Only prevent default if animation is actually gonna happen
-                event.preventDefault();
-                $('html, body').animate({
-                    scrollTop: target.offset().top
-                }, 1000, function() {
-                    // Callback after animation
-                    // Must change focus!
-                    var $target = $(target);
-                    $target.focus();
-                    if ($target.is(":focus")) { // Checking if the target was focused
-                        return false;
-                    } else {
-                        $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                        $target.focus(); // Set focus again
-                    };
-                });
-            }
-        }
-    });
+
     /*-----------------------------------
      * CAROUSEL / SLIDERS
      *-----------------------------------*/
@@ -155,28 +110,9 @@ $(function() {
             }]
         });
     }
-    /*-----------------------------------
-     * MAGNIFIC POPUP
-     *-----------------------------------*/
-    var $videoPlay = $('.video-play');
-    if ($videoPlay.length && $.fn.magnificPopup) {
-        $videoPlay.magnificPopup({
-            type: 'iframe',
-            iframe: {
-                patterns: {
-                    youtube: {
-                        src: '//www.youtube.com/embed/%id%?autoplay=1&controls=1&showinfo=0&rel=0' // URL that will be set as a source for iframe.
-                    }
-                }
-            }
-        });
-    }
 
 });
-// mobileCheck: function() {
-//     return !(/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
-// }
-/*end fn*/
+
 $(window).on('load', function() {
     /*-----------------------------------
      * PRELOADER
