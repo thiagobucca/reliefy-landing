@@ -1,5 +1,4 @@
 $(function() {
-    window.onscroll = function() {scrollFunction()};
 
     "use strict";
     $('#preloader').on('click', function() {
