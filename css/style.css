@@ -1818,6 +1818,13 @@ blockquote {
       .mobileNot {display: none;}
   }
 
+  .qrcode {display: inline;} 
+
+  @media (max-width: 998px) { 
+    .qrcode {margin-left: 66% !important; margin-top: -34% !important}
+}
+
+
   #logo 
 {
    width:200px;/*give it a fixed size*/
