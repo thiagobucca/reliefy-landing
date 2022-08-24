@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Reliefy">
+    <meta name="keywords" content="HTML5, bootstrap, health, mental, psychologist">
+    <!-- Site Name, Title, and Description to be displayed -->
+    <meta property="og:site_name" content="Reliefy">
+    <meta property="og:title" content="Reliefy">
+    <meta property="og:description" content="Um novo jeito de cuidar da sua mente.">
+
+    <meta property="og:image" content="https://reliefy.com.br/images/logo.jpeg">
+
+    <!-- No need to change anything here -->
+    <meta property="og:type" content="website" />
+    <meta property="og:image:type" content="image/jpeg">
+
+    <!-- Size of image. Any size up to 300. Anything above 300px will not work in WhatsApp -->
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+
+    <!-- Website to visit when clicked in fb or WhatsApp-->
+    <meta property="og:url" content="http://www.reliefy.com.br">
+    <title>Reliefy</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="vendors/fontawesome/css/font-awesome.min.css">
+    <!-- Pe-icon Font -->
+    <link rel="stylesheet" href="vendors/pe-icon/css/helper.css">
+    <link rel="stylesheet" href="vendors/pe-icon/css/pe-icon-7-stroke.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+    <!-- owlcarousel Slider -->
+    <link rel="stylesheet" href="vendors/owlcarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/owlcarousel/css/owl.theme.default.min.css">
+    <!-- Main css -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="preloader" id="preloader"> <svg class="spinner" id="pageloader_anime" width="32px" height="32px"
+            viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+            <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+        </svg> </div>
+
+    <script>
+
+        window.setTimeout(function () {
+            window.location.href = getDeviceType();
+        }, 1000)
+
+
+        function getDeviceType() {
+
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            var url = ""
+
+            // Huawei Phone must come first because its UA also contains "Android"
+            if (userAgent.includes("HUAWEI")) {
+                url = 'https://play.google.com/store/apps/details?id=com.reliefyapp'
+            } else if (userAgent.includes("Android")) {
+                url = 'https://play.google.com/store/apps/details?id=com.reliefyapp'
+            } else if (userAgent.includes("iPhone")) {
+                url = 'https://apps.apple.com/pt/app/reliefy/id1545720157'
+            } else {
+                //cant be sure about device, so redirect to home page
+                url = 'https://www.reliefy.com.br'
+            }
+            return url;
+        }        
+    </script>
+    <script src="vendors/jquery/js/jquery-3.2.1.min.js"></script>
+    <script src="vendors/bootstrap/js/popper.min.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendors/owlcarousel/js/owl.carousel.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
